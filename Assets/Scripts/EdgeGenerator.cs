@@ -5,7 +5,9 @@ namespace LevelGraph {
     [ExecuteInEditMode]
     public class EdgeGenerator : MonoBehaviour {
         [SerializeField] Vertex seedVertex;
-        [SerializeField] float maxEdgeLength = 5f;
+        [SerializeField] [Min(0)] float maxEdgeLength = 5f;
+        [SerializeField] [Min(0)] int maxNearestNeighborSize = 3;
+        [SerializeField] [Min(0)] int maxVertexDegree = 3;
 
         [Header("Editor")]
         [SerializeField] bool showGizmos = true;
@@ -39,8 +41,10 @@ namespace LevelGraph {
                     while(neighbors.Count > 0) {
                         Vertex target = SelectRandomVertex(neighbors);
 
-                        seedVertex.Connect(target);
-                        target.Connect(seedVertex);
+                        if(seedVertex.GetDegrees() < maxVertexDegree) {
+                            seedVertex.Connect(target);
+                            target.Connect(seedVertex);
+                        }
 
                         neighbors.Remove(target);
                         traversal.Enqueue(target);
@@ -54,7 +58,9 @@ namespace LevelGraph {
         List<Vertex> GetNeighbors(Vertex source, List<Vertex> candidates) {
             List<Vertex> neighbors = new List<Vertex>();
             foreach(Vertex candidate in candidates) {
+                if(neighbors.Count >= maxNearestNeighborSize) break;
                 if(candidate == source) continue;
+                if(candidate.GetDegrees() >= maxVertexDegree) continue;
                 float distance = Vector3.Distance(source.transform.position, candidate.transform.position);
                 if(distance > maxEdgeLength) continue;
 

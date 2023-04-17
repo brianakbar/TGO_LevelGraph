@@ -19,7 +19,11 @@ namespace LevelGraph {
             connectedVertices.Clear();
         }
 
-        //Editor
+        public int GetDegrees() {
+            return connectedVertices.Count;
+        }
+
+        //EDITOR
 
         public void SetEdgeColor(Color color) {
             edgeColor = color;
