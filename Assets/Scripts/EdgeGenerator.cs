@@ -11,7 +11,6 @@ namespace LevelGraph {
         [SerializeField] bool showGizmos = true;
         [SerializeField] Color edgeColor = new Color(0, 0, 0, 0.8f);
         [SerializeField] Color gizmosColor = Color.red;
-        [SerializeField] string edgeContainerTag = "EdgeContainer";
 
         void OnEnable() {
             GetComponent<VertexGenerator>().onVertexGenerated += SetVerticesGizmos;
@@ -26,13 +25,6 @@ namespace LevelGraph {
         }
 
         public void RegenerateEdges() {
-            // for(int i = transform.childCount; i > 0; --i) {
-            //     Transform child = transform.GetChild(i - 1);
-            //     if (child.tag != edgeContainerTag) continue;
-
-            //     DestroyImmediate(child.gameObject);
-            // }
-            // GameObject edgeContainer = CreateEdgeContainer();
             List<Vertex> unconnected = RebuildVerticesList();
             if(seedVertex == null) seedVertex = SelectRandomVertex(unconnected);
             else if(!unconnected.Contains(seedVertex)) seedVertex = SelectRandomVertex(unconnected);
@@ -69,13 +61,6 @@ namespace LevelGraph {
                 neighbors.Add(candidate);
             }
             return neighbors;
-        }
-
-        GameObject CreateEdgeContainer() {
-            GameObject edgeContainer = new GameObject("Edges");
-            edgeContainer.transform.parent = transform;
-            edgeContainer.tag = edgeContainerTag;
-            return edgeContainer;
         }
 
         List<Vertex> RebuildVerticesList() {
