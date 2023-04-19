@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace LevelGraph {
@@ -22,6 +23,10 @@ namespace LevelGraph {
 
         public int GetWeight() {
             return weight;
+        }
+
+        public void SetWeight(int newWeight) {
+            weight = newWeight;
         }
 
         public float GetLength() {
