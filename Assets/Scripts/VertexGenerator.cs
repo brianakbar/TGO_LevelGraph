@@ -16,6 +16,8 @@ namespace LevelGraph {
 
         Vector3 jitterSize;
 
+        EdgeList edgeList;
+
         void OnValidate() {
             float jitterSizeX = size.x / gridResolution.x;
             float jitterSizeY = size.y / gridResolution.y;
@@ -38,6 +40,10 @@ namespace LevelGraph {
         }
 
         public void RegenerateVertices() {
+            if(edgeList == null) {
+                edgeList = GetComponent<EdgeList>();
+            }
+            edgeList.Clear();
             for(int i = transform.childCount; i > 0; --i) {
                 DestroyImmediate(transform.GetChild(0).gameObject);
             }

@@ -11,8 +11,9 @@ namespace LevelGraph {
 
         [Header("Editor")]
         [SerializeField] bool showGizmos = true;
-        [SerializeField] Color edgeColor = new Color(0, 0, 0, 0.8f);
         [SerializeField] Color gizmosColor = Color.red;
+
+        EdgeList edgeList;
 
         void OnEnable() {
             GetComponent<VertexGenerator>().onVertexGenerated += SetVerticesGizmos;
@@ -27,6 +28,10 @@ namespace LevelGraph {
         }
 
         public void RegenerateEdges() {
+            if(edgeList == null) {
+                edgeList = GetComponent<EdgeList>();
+            }
+            edgeList.Clear();
             List<Vertex> unconnected = RebuildVerticesList();
             if(seedVertex == null) seedVertex = SelectRandomVertex(unconnected);
             else if(!unconnected.Contains(seedVertex)) seedVertex = SelectRandomVertex(unconnected);
@@ -41,9 +46,11 @@ namespace LevelGraph {
                     while(neighbors.Count > 0) {
                         Vertex target = SelectRandomVertex(neighbors);
 
-                        if(seedVertex.GetDegrees() < maxVertexDegree) {
-                            seedVertex.Connect(target);
-                            target.Connect(seedVertex);
+                        if(seedVertex.GetDegrees() < maxVertexDegree) {  
+                            Edge edge = new Edge(seedVertex, target);
+                            edgeList.Add(edge);
+                            seedVertex.Connect(edge);
+                            target.Connect(edge);
                         }
 
                         neighbors.Remove(target);
@@ -88,7 +95,6 @@ namespace LevelGraph {
             foreach(Transform child in transform) {
                 if(!child.TryGetComponent(out Vertex vertex)) continue;
 
-                vertex.SetEdgeColor(edgeColor);
                 vertex.SetGizmosColor(gizmosColor);
                 vertex.SetGizmosEdgeLength(maxEdgeLength);
                 vertex.SetShowGizmos(showGizmos);

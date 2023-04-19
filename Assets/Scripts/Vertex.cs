@@ -3,32 +3,27 @@ namespace LevelGraph {
     using UnityEngine;
     
     public class Vertex : MonoBehaviour {
-        [SerializeField] List<Vertex> connectedVertices = new List<Vertex>();
+        [SerializeReference] List<Edge> edges = new List<Edge>();
 
         [Header("Editor")]
         [SerializeField] bool showGizmos = true;
-        [SerializeField] Color edgeColor = new Color(0, 0, 0, 0.8f);
         [SerializeField] Color gizmosColor = Color.red;
         [SerializeField] float gizmosEdgeLength = 5f;
 
-        public void Connect(Vertex connectTo) {
-            connectedVertices.Add(connectTo);
+        public void Connect(Edge connectedEdge) {
+            edges.Add(connectedEdge);
         }
 
         public void RemoveAllEdges() {
-            connectedVertices.Clear();
+            edges.Clear();
         }
 
         public int GetDegrees() {
-            return connectedVertices.Count;
+            return edges.Count;
         }
 
         //EDITOR
-
-        public void SetEdgeColor(Color color) {
-            edgeColor = color;
-        }
-
+        
         public void SetGizmosColor(Color color) {
             gizmosColor = color;
         }
@@ -39,13 +34,6 @@ namespace LevelGraph {
 
         public void SetShowGizmos(bool value) {
             showGizmos = value;
-        }
-
-        void OnDrawGizmos() {
-            Gizmos.color = edgeColor;
-            foreach(Vertex vertex in connectedVertices) {
-                Gizmos.DrawLine(transform.position, vertex.transform.position);
-            }
         }
 
         public void OnDrawGizmosSelected() {
