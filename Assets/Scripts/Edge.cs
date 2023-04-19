@@ -19,5 +19,13 @@ namespace LevelGraph {
         public Vector3 GetTargetPosition() {
             return target.transform.position;
         }
+
+        public int GetWeight() {
+            return weight;
+        }
+
+        public float GetLength() {
+            return Vector3.Distance(source.transform.position, target.transform.position);
+        }
     }
 }

@@ -3453,6 +3453,9 @@ MonoBehaviour:
   - rid: 6850205271236805353
   - rid: 6850205271236805354
   edgeColor: {r: 0, g: 0, b: 0, a: 0.8}
+  showWeight: 1
+  weightColor: {r: 1, g: 1, b: 1, a: 0.92941177}
+  weightSize: 0
   references:
     version: 2
     RefIds:
