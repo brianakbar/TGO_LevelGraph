@@ -12,5 +12,17 @@ namespace LevelGraph {
             this.target = target;
             this.weight = weight;
         }
+
+        public string GetSource() {
+            return source;
+        }
+
+        public string GetTarget() {
+            return target;
+        }
+
+        public int GetWeight() {
+            return weight;
+        }
     }
 }

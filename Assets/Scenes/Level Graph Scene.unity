@@ -2832,7 +2832,7 @@ GameObject:
   - component: {fileID: 403593194}
   - component: {fileID: 403593195}
   m_Layer: 0
-  m_Name: Level Boundary
+  m_Name: Level Graph
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3778,6 +3778,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelGraph: {fileID: 11400000, guid: 3318c92443f96d94498e177b013c031c, type: 2}
+  editor:
+    vertexPrefab: {fileID: 0}
 --- !u!1 &416703838
 GameObject:
   m_ObjectHideFlags: 0

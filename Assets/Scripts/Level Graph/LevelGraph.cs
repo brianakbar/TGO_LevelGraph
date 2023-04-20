@@ -15,6 +15,14 @@ namespace LevelGraph {
             EditorUtility.SetDirty(this);
             AssetDatabase.SaveAssets();
         }
+
+        public IEnumerable<LevelGraphVertex> GetVertices() {
+            return vertices;
+        }
+
+        public IEnumerable<LevelGraphEdge> GetEdges() {
+            return edges;
+        }
 #endif
 
     }

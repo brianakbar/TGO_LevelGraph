@@ -7,9 +7,10 @@ namespace LevelGraph {
         [SerializeField] Vertex target;
         [SerializeField] int weight = 1;
 
-        public Edge(Vertex source, Vertex target) {
+        public Edge(Vertex source, Vertex target, int weight = 1) {
             this.source = source;
             this.target = target;
+            this.weight = weight;
         }
 
         public Vertex GetSource() {

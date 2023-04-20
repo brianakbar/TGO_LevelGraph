@@ -1,11 +1,21 @@
 namespace LevelGraph {
+    using System;
     using System.Collections.Generic;
     using UnityEngine;
     
     public class LevelGraphConverter : MonoBehaviour {
         [SerializeField] LevelGraph levelGraph;
 
+        [Space]
+        [SerializeField] Editor editor;
+
+        [Serializable]
+        class Editor {
+            public Vertex vertexPrefab;
+        }
+
         public void ConvertTo(LevelGraph levelGraph) {
+            if(levelGraph == null) return;
             if(TryGetComponent<EdgeList>(out EdgeList edgeList)) {
                 List<LevelGraphVertex> vertices = new List<LevelGraphVertex>();
                 List<LevelGraphEdge> edges = new List<LevelGraphEdge>();
@@ -25,8 +35,36 @@ namespace LevelGraph {
             }
         }
 
-        public void Open(LevelGraph levelGraph) {
+        public void Unpack() {
+            if(levelGraph == null) return;
 
+            DestroyVertices();
+            Dictionary<string, Vertex> vertexKey = new Dictionary<string, Vertex>();
+            foreach(LevelGraphVertex vertex in levelGraph.GetVertices()) {
+                Vertex instance = Instantiate(editor.vertexPrefab, 
+                                                transform.position + vertex.GetPosition(), 
+                                                Quaternion.identity, transform);
+                vertexKey.Add(vertex.GetID(), instance);
+            }
+            foreach(LevelGraphEdge levelGraphEdge in levelGraph.GetEdges()) {
+                if(TryGetComponent<EdgeList>(out EdgeList edgeList)) {
+                    Vertex source = vertexKey[levelGraphEdge.GetSource()];
+                    Vertex target = vertexKey[levelGraphEdge.GetTarget()];
+                    Edge edge = new Edge(source, target, levelGraphEdge.GetWeight());
+                    source.Connect(edge);
+                    target.Connect(edge);
+                    edgeList.Add(edge);
+                }
+            }
+        }
+
+        void DestroyVertices() {
+            if(TryGetComponent<EdgeList>(out EdgeList edgeList)) {
+                edgeList.Clear();
+            }
+            for (int i = transform.childCount; i > 0; --i) {
+                DestroyImmediate(transform.GetChild(0).gameObject);
+            }
         }
 
         LevelGraphVertex ConvertFromVertex(Vertex vertex) {

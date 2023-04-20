@@ -16,6 +16,10 @@ namespace LevelGraph {
             return id;
         }
 
+        public Vector3 GetPosition() {
+            return position;
+        }
+
         public override bool Equals(object obj) {
             if (obj == null || GetType() != obj.GetType())
             {

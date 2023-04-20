@@ -20,6 +20,10 @@ namespace LevelGraph.Editor {
                 levelGraphConverter.ConvertTo(SaveAsset(typeof(LevelGraph), "Assets"));
             }
             GUILayout.FlexibleSpace();
+            if(GUILayout.Button("Unpack", guiLayoutOptions)) {
+                levelGraphConverter.Unpack();
+            }
+            GUILayout.FlexibleSpace();
             GUILayout.EndHorizontal();
         }
 
