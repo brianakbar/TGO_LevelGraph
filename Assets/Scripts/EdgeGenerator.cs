@@ -9,11 +9,16 @@ namespace LevelGraph {
         [SerializeField] [Min(0)] int maxNearestNeighborSize = 3;
         [SerializeField] [Min(0)] int maxVertexDegree = 3;
 
-        [Header("Editor")]
-        [SerializeField] bool showGizmos = true;
-        [SerializeField] Color gizmosColor = Color.red;
+        [Space]
+        [SerializeField] Editor editor;
 
         EdgeList edgeList;
+
+        [System.Serializable]
+        class Editor {
+            public bool showGizmos = true;
+            public Color gizmosColor = new Color(255, 0, 0, 0.3f);
+        }
 
         void OnEnable() {
             GetComponent<VertexGenerator>().onVertexGenerated += SetVerticesGizmos;
@@ -95,9 +100,9 @@ namespace LevelGraph {
             foreach(Transform child in transform) {
                 if(!child.TryGetComponent(out Vertex vertex)) continue;
 
-                vertex.SetGizmosColor(gizmosColor);
+                vertex.SetGizmosColor(editor.gizmosColor);
                 vertex.SetGizmosEdgeLength(maxEdgeLength);
-                vertex.SetShowGizmos(showGizmos);
+                vertex.SetShowGizmos(editor.showGizmos);
             }
         }
     }

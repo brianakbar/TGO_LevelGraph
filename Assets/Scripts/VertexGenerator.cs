@@ -7,16 +7,21 @@ namespace LevelGraph {
         [SerializeField] Vector3 gridResolution;
         [SerializeField] [Range(0f, 1f)] float instantiationProbability = 0.5f;
 
-        [Header("Editor")]
-        [SerializeField] bool showGizmos = true;
-        [SerializeField] Color gizmosColor = new Color(255, 255, 255, 0.2f);
-        [SerializeField] Vertex vertexPrefab;
-
+        [Space]
+        [SerializeField] Editor editor;
+        
         public event Action onVertexGenerated;
 
         Vector3 jitterSize;
 
         EdgeList edgeList;
+
+        [Serializable]
+        class Editor {
+            public bool showGizmos = true;
+            public Color gizmosColor = new Color(255, 255, 255, 0.2f);
+            public Vertex vertexPrefab;
+        }
 
         void OnValidate() {
             float jitterSizeX = size.x / gridResolution.x;
@@ -26,9 +31,9 @@ namespace LevelGraph {
         }
 
         void OnDrawGizmosSelected() {
-            if(!showGizmos) return;
+            if(!editor.showGizmos) return;
 
-            Gizmos.color = gizmosColor;
+            Gizmos.color = editor.gizmosColor;
             for(int x = 0; x < gridResolution.x; x++) {
                 for(int y = 0; y < gridResolution.y; y++) {
                     for(int z = 0; z < gridResolution.z; z++) {
@@ -52,7 +57,7 @@ namespace LevelGraph {
                     for(int z = 0; z < gridResolution.z; z++) {
                         if(!(UnityEngine.Random.Range(0f, 1f) <= instantiationProbability)) continue;
 
-                        Instantiate(vertexPrefab, GetVertexPosition(x, y, z, jitterSize), Quaternion.identity, transform);
+                        Instantiate(editor.vertexPrefab, GetVertexPosition(x, y, z, jitterSize), Quaternion.identity, transform);
                     }
                 }
             }

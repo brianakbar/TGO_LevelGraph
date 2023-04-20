@@ -6,11 +6,16 @@ namespace LevelGraph {
     public class EdgeList : MonoBehaviour {
         [SerializeReference] List<Edge> edges;
 
-        [Header("Editor")]
-        [SerializeField] Color edgeColor = new Color(0, 0, 0, 0.8f);
-        [SerializeField] bool showWeight = true;
-        [SerializeField] Color weightColor = new Color(255, 255, 255, 0.4f);
-        [SerializeField] int weightSize;
+        [Space]
+        [SerializeField] Editor editor;
+
+        [System.Serializable]
+        class Editor {
+            public Color edgeColor = new Color(0, 0, 0, 0.8f);
+            public bool showWeight = true;
+            public Color weightColor = new Color(255, 255, 255, 0.4f);
+            public int weightSize;
+        }
 
         public void Add(Edge edge) {
             if(edges.Contains(edge)) return;
@@ -39,13 +44,13 @@ namespace LevelGraph {
         }
 
         void OnDrawGizmos() {
-            Gizmos.color = edgeColor;
+            Gizmos.color = editor.edgeColor;
             GUIStyle style = new GUIStyle(EditorStyles.label);
-            style.normal.textColor = weightColor;
-            style.fontSize = weightSize;
+            style.normal.textColor = editor.weightColor;
+            style.fontSize = editor.weightSize;
             foreach(Edge edge in edges) {
                 Gizmos.DrawLine(edge.GetSourcePosition(), edge.GetTargetPosition());
-                if(!showWeight) continue;
+                if(!editor.showWeight) continue;
                 
                 Vector3 weightPosition = (edge.GetSourcePosition() + edge.GetTargetPosition())/2;
                 Handles.Label(weightPosition, edge.GetWeight().ToString(), style);
