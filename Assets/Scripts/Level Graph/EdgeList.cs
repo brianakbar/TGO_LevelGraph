@@ -1,5 +1,6 @@
 namespace LevelGraph {
     using System.Collections.Generic;
+    using System.Linq;
     using UnityEditor;
     using UnityEngine;
     
@@ -29,6 +30,16 @@ namespace LevelGraph {
 
         public IEnumerable<Edge> GetEdges() {
             return edges;
+        }
+
+        public void PreserveEdges(List<Edge> edgesToPreserve) {
+            List<Edge> newEdges = new List<Edge>();
+            foreach(Edge edge in edges) {
+                if(edgesToPreserve.Contains(edge)) {
+                    newEdges.Add(edge);
+                }
+            }
+            edges = newEdges;
         }
 
         public float GetAverageLength() {

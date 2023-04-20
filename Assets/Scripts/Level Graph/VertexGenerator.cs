@@ -37,7 +37,6 @@ namespace LevelGraph {
             for(int x = 0; x < gridResolution.x; x++) {
                 for(int y = 0; y < gridResolution.y; y++) {
                     for(int z = 0; z < gridResolution.z; z++) {
-                        
                         Gizmos.DrawWireCube(GetVertexPosition(x, y, z, jitterSize), jitterSize);
                     }
                 }
@@ -45,23 +44,27 @@ namespace LevelGraph {
         }
 
         public void RegenerateVertices() {
-            if(edgeList == null) {
-                edgeList = GetComponent<EdgeList>();
-            }
-            edgeList.Clear();
-            for(int i = transform.childCount; i > 0; --i) {
-                DestroyImmediate(transform.GetChild(0).gameObject);
-            }
-            for(int x = 0; x < gridResolution.x; x++) {
-                for(int y = 0; y < gridResolution.y; y++) {
-                    for(int z = 0; z < gridResolution.z; z++) {
-                        if(!(UnityEngine.Random.Range(0f, 1f) <= instantiationProbability)) continue;
+            DestroyVertices();
+            for (int x = 0; x < gridResolution.x; x++) {
+                for (int y = 0; y < gridResolution.y; y++) {
+                    for (int z = 0; z < gridResolution.z; z++) {
+                        if (!(UnityEngine.Random.Range(0f, 1f) <= instantiationProbability)) continue;
 
                         Instantiate(editor.vertexPrefab, GetVertexPosition(x, y, z, jitterSize), Quaternion.identity, transform);
                     }
                 }
             }
-            if(onVertexGenerated != null) onVertexGenerated();
+            if (onVertexGenerated != null) onVertexGenerated();
+        }
+
+        void DestroyVertices() {
+            if (edgeList == null) {
+                edgeList = GetComponent<EdgeList>();
+            }
+            edgeList.Clear();
+            for (int i = transform.childCount; i > 0; --i) {
+                DestroyImmediate(transform.GetChild(0).gameObject);
+            }
         }
 
         Vector3 GetVertexPosition(int x, int y, int z, Vector3 jitterSize) {

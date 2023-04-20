@@ -13,6 +13,14 @@ namespace LevelGraph {
             this.target = target;
         }
 
+        public Vertex GetSource() {
+            return source;
+        }
+
+        public Vertex GetTarget() {
+            return target;
+        }
+
         public Vector3 GetSourcePosition() {
             return source.transform.position;
         }

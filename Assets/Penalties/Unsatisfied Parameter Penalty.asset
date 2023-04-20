@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a0707d9ab154d74992f27d8552fc82a, type: 3}
   m_Name: Unsatisfied Parameter Penalty
   m_EditorClassIdentifier: 
+  unsatisfiedParameters:
+  - type: 0
+    value:
+      min: 8
+      max: 10
+    penalty: 1
