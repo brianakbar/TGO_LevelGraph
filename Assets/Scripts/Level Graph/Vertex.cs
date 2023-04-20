@@ -19,6 +19,10 @@ namespace LevelGraph {
             edges.Add(connectedEdge);
         }
 
+        public void RemoveEdge(Edge edge) {
+            edges.Remove(edge);
+        }
+
         public void RemoveAllEdges() {
             edges.Clear();
         }

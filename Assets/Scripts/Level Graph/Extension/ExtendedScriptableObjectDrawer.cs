@@ -118,17 +118,18 @@ namespace LevelGraph.Extension {
 					serializedObject.Dispose();
 					EditorGUI.indentLevel--;
 				}
-			} else {
-				if(GUI.Button(buttonRect, "Create")) {
-					string selectedAssetPath = "Assets";
-					if(property.serializedObject.targetObject is MonoBehaviour) {
-						MonoScript ms = MonoScript.FromMonoBehaviour((MonoBehaviour)property.serializedObject.targetObject);
-						selectedAssetPath = System.IO.Path.GetDirectoryName(AssetDatabase.GetAssetPath( ms ));
-					}
+			} 
+			// else {
+			// 	if(GUI.Button(buttonRect, "Create")) {
+			// 		string selectedAssetPath = "Assets";
+			// 		if(property.serializedObject.targetObject is MonoBehaviour) {
+			// 			MonoScript ms = MonoScript.FromMonoBehaviour((MonoBehaviour)property.serializedObject.targetObject);
+			// 			selectedAssetPath = System.IO.Path.GetDirectoryName(AssetDatabase.GetAssetPath( ms ));
+			// 		}
 					
-					property.objectReferenceValue = CreateAssetWithSavePrompt(type, selectedAssetPath);
-				}
-			}
+			// 		property.objectReferenceValue = CreateAssetWithSavePrompt(type, selectedAssetPath);
+			// 	}
+			// }
 			property.serializedObject.ApplyModifiedProperties();
 			EditorGUI.EndProperty ();
 		}
@@ -171,16 +172,17 @@ namespace LevelGraph.Extension {
 				if(isExpanded) {
 					DrawScriptableObjectChildFields(objectReferenceValue);
 				}
-			} else {
-				if(GUILayout.Button("Create", GUILayout.Width(buttonWidth))) {
-					string selectedAssetPath = "Assets";
-					var newAsset = CreateAssetWithSavePrompt(typeof(T), selectedAssetPath);
-					if(newAsset != null) {
-						objectReferenceValue = (T)newAsset;
-					}
-				}
-				EditorGUILayout.EndHorizontal();
-			}
+			} 
+			// else {
+			// 	if(GUILayout.Button("Create", GUILayout.Width(buttonWidth))) {
+			// 		string selectedAssetPath = "Assets";
+			// 		var newAsset = CreateAssetWithSavePrompt(typeof(T), selectedAssetPath);
+			// 		if(newAsset != null) {
+			// 			objectReferenceValue = (T)newAsset;
+			// 		}
+			// 	}
+			// 	EditorGUILayout.EndHorizontal();
+			// }
 			EditorGUILayout.EndVertical();
 			return objectReferenceValue;
 		}
@@ -241,16 +243,17 @@ namespace LevelGraph.Extension {
 				if(isExpanded) {
 					
 				}
-			} else {
-				if(GUILayout.Button("Create", GUILayout.Width(buttonWidth))) {
-					string selectedAssetPath = "Assets";
-					var newAsset = CreateAssetWithSavePrompt(typeof(T), selectedAssetPath);
-					if(newAsset != null) {
-						objectReferenceValue = (T)newAsset;
-					}
-				}
-				EditorGUILayout.EndHorizontal();
-			}
+			} 
+			// else {
+			// 	if(GUILayout.Button("Create", GUILayout.Width(buttonWidth))) {
+			// 		string selectedAssetPath = "Assets";
+			// 		var newAsset = CreateAssetWithSavePrompt(typeof(T), selectedAssetPath);
+			// 		if(newAsset != null) {
+			// 			objectReferenceValue = (T)newAsset;
+			// 		}
+			// 	}
+			// 	EditorGUILayout.EndHorizontal();
+			// }
 			EditorGUILayout.EndVertical();
 			return objectReferenceValue;
 		}

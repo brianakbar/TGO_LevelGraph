@@ -1,7 +1,6 @@
-using System;
-using UnityEngine;
-
 namespace LevelGraph {
+    using UnityEngine;
+
     [System.Serializable]
     public class Edge {
         [SerializeField] Vertex source;

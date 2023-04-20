@@ -38,6 +38,10 @@ namespace LevelGraph {
                 if(edgesToPreserve.Contains(edge)) {
                     newEdges.Add(edge);
                 }
+                else {
+                    edge.GetSource().RemoveEdge(edge);
+                    edge.GetTarget().RemoveEdge(edge);
+                }
             }
             edges = newEdges;
         }
