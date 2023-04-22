@@ -22,10 +22,12 @@ namespace LevelGraph {
         }
 
         public Vector3 GetSourcePosition() {
+            if(source == null) return default;
             return source.transform.position;
         }
 
         public Vector3 GetTargetPosition() {
+            if(target == null) return default;
             return target.transform.position;
         }
 
