@@ -6,9 +6,7 @@ namespace LevelGraph {
     public class EdgeGenerator : MonoBehaviour {
         [SerializeField] Vertex seedVertex;
         [SerializeField] List<EdgeGeneratorParameter> parameters;
-        //[SerializeField] [Min(0)] float maxEdgeLength = 5f;
         [SerializeField] [Min(0)] int maxNearestNeighborSize = 3;
-        //[SerializeField] [Min(0)] int maxVertexDegree = 3;
 
         [Space]
         [SerializeField] Editor editor;
@@ -19,18 +17,6 @@ namespace LevelGraph {
         class Editor {
             public bool showGizmos = true;
             public Color gizmosColor = new Color(255, 0, 0, 0.3f);
-        }
-
-        void OnEnable() {
-            GetComponent<VertexGenerator>().onVertexGenerated += SetVerticesGizmos;
-        }
-
-        void OnDisable() {
-            GetComponent<VertexGenerator>().onVertexGenerated -= SetVerticesGizmos;
-        }
-
-        void OnValidate() {
-            SetVerticesGizmos();
         }
 
         public void RegenerateEdges() {
@@ -52,7 +38,6 @@ namespace LevelGraph {
                     while(neighbors.Count > 0) {
                         Vertex target = SelectRandomVertex(neighbors);
 
-                        //if(seedVertex.GetDegrees() < maxVertexDegree) {  
                         Edge edge = new Edge(seedVertex, target);
                         if(CheckParameters(edge)) {    
                             edgeList.Add(edge);
@@ -76,9 +61,6 @@ namespace LevelGraph {
                 if(candidate == source) continue;
                 Edge edge = new Edge(source, candidate);
                 if(!CheckParameters(edge)) continue;
-                //if(candidate.GetDegrees() >= maxVertexDegree) continue;
-                //float distance = Vector3.Distance(source.transform.position, candidate.transform.position);
-                //if(distance > maxEdgeLength) continue;
 
                 neighbors.Add(candidate);
             }
@@ -107,13 +89,12 @@ namespace LevelGraph {
             return vertices[Random.Range(0, vertices.Count)];
         }
 
-        void SetVerticesGizmos() {
-            foreach(Transform child in transform) {
-                if(!child.TryGetComponent(out Vertex vertex)) continue;
+        void OnDrawGizmosSelected() {
+            if(!editor.showGizmos) return;
 
-                vertex.SetGizmosColor(editor.gizmosColor);
-                //vertex.SetGizmosEdgeLength(maxEdgeLength);
-                vertex.SetShowGizmos(editor.showGizmos);
+            Gizmos.color = editor.gizmosColor;
+            foreach(EdgeGeneratorParameter parameter in parameters) {
+                parameter.DrawGizmos(gameObject);
             }
         }
     }

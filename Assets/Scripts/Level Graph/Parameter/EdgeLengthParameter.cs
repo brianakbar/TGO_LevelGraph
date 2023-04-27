@@ -13,5 +13,13 @@ namespace LevelGraph.Parameter {
             }
             return false;
         }
+
+        public override void DrawGizmos(GameObject gameObject) {
+            foreach(Transform child in gameObject.transform) {
+                if(child.TryGetComponent<Vertex>(out Vertex vertex)) {
+                    Gizmos.DrawWireSphere(vertex.transform.position, max);
+                }
+            }
+        }
     }
 }
