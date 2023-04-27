@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a0707d9ab154d74992f27d8552fc82a, type: 3}
-  m_Name: Unsatisfied Parameter Penalty
+  m_Script: {fileID: 11500000, guid: d2451bb6d21c52843bf0c2b3fee43809, type: 3}
+  m_Name: Axis Angle Parameter
   m_EditorClassIdentifier: 
-  unsatisfiedParameters:
-  - parameter: {fileID: 11400000, guid: 21fa388be593e1e4d8028965a19c8b90, type: 2}
-    penalty: 2
+  min: 0
+  max: 0

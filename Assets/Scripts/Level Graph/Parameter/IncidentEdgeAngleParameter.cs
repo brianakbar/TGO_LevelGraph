@@ -4,7 +4,7 @@ namespace LevelGraph.Parameter {
     [CreateAssetMenu(fileName = "New Incident Edge Angle Parameter", menuName = "Edge Generator/Incident Edge Angle Parameter", order = 0)]
     public class IncidentEdgeAngleParameter : EdgeGeneratorParameter {
         [SerializeField] [Range(0, 180)] float min = 0;
-        [SerializeField] [Range(0, 180)] float max = 5;
+        [SerializeField] [Range(0, 180)] float max = 90;
 
         public override bool Check(Edge edge) {
             Vector3 edgeVector = GetVector(edge);
@@ -14,7 +14,7 @@ namespace LevelGraph.Parameter {
                 Vector3 incidentEdgeVector = GetVector(incidentEdge);
                 float angleBetweenEdge = Vector3.Angle(edgeVector, incidentEdgeVector);
 
-                if(angleBetweenEdge < min || angleBetweenEdge > max) {
+                if(angleBetweenEdge < (min - Mathf.Epsilon) || angleBetweenEdge > (max + Mathf.Epsilon)) {
                     return false;
                 }
             }
@@ -24,7 +24,7 @@ namespace LevelGraph.Parameter {
                 Vector3 incidentEdgeVector = GetVector(incidentEdge);
                 float angleBetweenEdge = Vector3.Angle(edgeVector, incidentEdgeVector);
 
-                if(angleBetweenEdge < min || angleBetweenEdge > max) {
+                if(angleBetweenEdge < (min - Mathf.Epsilon) || angleBetweenEdge > (max + Mathf.Epsilon)) {
                     return false;
                 }
             }

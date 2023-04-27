@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Edge Length Parameter
   m_EditorClassIdentifier: 
   min: 0
-  max: 5
+  max: 8

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddc7153435e06945aabaf79ab64acaa, type: 3}
   m_Name: Incident Edge Angle
   m_EditorClassIdentifier: 
-  min: 0
-  max: 5
+  min: 90
+  max: 90

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063d8a94b7e335e409dbae2121838f5c, type: 3}
   m_Name: Edge Length Penalty
   m_EditorClassIdentifier: 
-  edgeLengthAllowedDeviation: 20
-  weightPenalty: 1
+  allowedDeviation: 20
+  penalty: 1
   perDeviation: 1
