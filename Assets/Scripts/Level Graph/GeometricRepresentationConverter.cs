@@ -1,12 +1,9 @@
 namespace LevelGraph {
     using System.Collections.Generic;
     using UnityEngine;
-    using Parabox.CSG;
 
     [ExecuteInEditMode]
     public class GeometricRepresentationConverter : MonoBehaviour {
-        // [SerializeField] List<GameObject> walls;
-        // [SerializeField] List<GameObject> floors;
         [SerializeField] List<GameObject> rooms;
         [SerializeField] List<GameObject> corridors;
         [SerializeField] List<GameObject> doors;
@@ -45,9 +42,6 @@ namespace LevelGraph {
             GameObject level = new GameObject("Level");
             foreach(Transform child in transform) {
                 if(child.TryGetComponent<Vertex>(out Vertex vertex)) {
-                    // GameObject box = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                    // box.transform.position = vertex.transform.position;
-                    // box.transform.localScale = vertexRepresentation.size;
                     GameObject room = Instantiate(PickRandomGameObject(rooms), vertex.transform.position, 
                                                     Quaternion.identity, level.transform);
                     room.transform.localScale *= scale;
@@ -67,40 +61,6 @@ namespace LevelGraph {
                 
             }
         }
-
-        // List<GameObject> CreateCSGGameObject(List<GameObject> gameObjects) {
-        //     List<GameObject> CSGGameObjects = new List<GameObject>();
-        //     foreach(GameObject gameObject in gameObjects) {
-        //         GameObject prefabInstance = Instantiate(gameObject);
-        //         GameObject gameObjectUnion = null;
-        //         GameObject firstGameObject = null;
-        //         MeshFilter meshFilter = null;
-        //         MeshRenderer meshRenderer = null;
-        //         foreach(MeshFilter filter in prefabInstance.GetComponentsInChildren<MeshFilter>()) {
-        //             if(gameObjectUnion == null) {
-        //                 gameObjectUnion = new GameObject();
-        //                 meshFilter = gameObjectUnion.AddComponent<MeshFilter>();
-        //                 meshRenderer = gameObjectUnion.AddComponent<MeshRenderer>();
-        //                 firstGameObject = filter.gameObject;
-        //                 continue;
-        //             }
-        //             Model result;
-        //             if(firstGameObject != null) {
-        //                 result = CSG.Union(firstGameObject, filter.gameObject);
-        //                 firstGameObject = null;
-        //             }
-        //             else {
-        //                 result = CSG.Union(gameObjectUnion, filter.gameObject);
-        //             }
-
-        //             meshFilter.sharedMesh = result.mesh;
-        //             meshRenderer.sharedMaterials = result.materials.ToArray();
-        //         }
-        //         CSGGameObjects.Add(gameObjectUnion);
-        //         DestroyImmediate(prefabInstance);
-        //     }
-        //     return CSGGameObjects;
-        // }
 
         GameObject PickRandomGameObject(List<GameObject> gameObjects) {
             return gameObjects[Random.Range(0, gameObjects.Count)];

@@ -7,8 +7,7 @@ namespace LevelGraph.Parameter {
         [SerializeField] [Range(0, 45)] float max = 0f;
 
         public override bool Check(Edge edge) {
-            Vector3 edgeVector2 = edge.GetTarget().transform.position - edge.GetSource().transform.position;
-            Vector3 edgeVector = new Vector3(edgeVector2.x, edgeVector2.y, edgeVector2.z);
+            Vector3 edgeVector = edge.GetTarget().transform.position - edge.GetSource().transform.position;
             
             Vector3[] axes = {Vector3.right, Vector3.left, Vector3.up, Vector3.down, Vector3.forward, Vector3.back};
             foreach(Vector3 axis in axes) {
