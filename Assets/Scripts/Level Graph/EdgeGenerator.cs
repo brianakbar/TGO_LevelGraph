@@ -5,9 +5,10 @@ namespace LevelGraph {
     [ExecuteInEditMode]
     public class EdgeGenerator : MonoBehaviour {
         [SerializeField] Vertex seedVertex;
-        [SerializeField] [Min(0)] float maxEdgeLength = 5f;
+        [SerializeField] List<EdgeGeneratorParameter> parameters;
+        //[SerializeField] [Min(0)] float maxEdgeLength = 5f;
         [SerializeField] [Min(0)] int maxNearestNeighborSize = 3;
-        [SerializeField] [Min(0)] int maxVertexDegree = 3;
+        //[SerializeField] [Min(0)] int maxVertexDegree = 3;
 
         [Space]
         [SerializeField] Editor editor;
@@ -51,8 +52,9 @@ namespace LevelGraph {
                     while(neighbors.Count > 0) {
                         Vertex target = SelectRandomVertex(neighbors);
 
-                        if(seedVertex.GetDegrees() < maxVertexDegree) {  
-                            Edge edge = new Edge(seedVertex, target);
+                        //if(seedVertex.GetDegrees() < maxVertexDegree) {  
+                        Edge edge = new Edge(seedVertex, target);
+                        if(CheckParameters(edge)) {    
                             edgeList.Add(edge);
                             seedVertex.Connect(edge);
                             target.Connect(edge);
@@ -72,9 +74,11 @@ namespace LevelGraph {
             foreach(Vertex candidate in candidates) {
                 if(neighbors.Count >= maxNearestNeighborSize) break;
                 if(candidate == source) continue;
-                if(candidate.GetDegrees() >= maxVertexDegree) continue;
-                float distance = Vector3.Distance(source.transform.position, candidate.transform.position);
-                if(distance > maxEdgeLength) continue;
+                Edge edge = new Edge(source, candidate);
+                if(!CheckParameters(edge)) continue;
+                //if(candidate.GetDegrees() >= maxVertexDegree) continue;
+                //float distance = Vector3.Distance(source.transform.position, candidate.transform.position);
+                //if(distance > maxEdgeLength) continue;
 
                 neighbors.Add(candidate);
             }
@@ -92,6 +96,13 @@ namespace LevelGraph {
             return vertices;
         }
 
+        bool CheckParameters(Edge edge) {
+            foreach(EdgeGeneratorParameter parameter in parameters) {
+                if(!parameter.Check(edge)) return false;
+            }
+            return true;
+        }
+
         Vertex SelectRandomVertex(List<Vertex> vertices) {
             return vertices[Random.Range(0, vertices.Count)];
         }
@@ -101,7 +112,7 @@ namespace LevelGraph {
                 if(!child.TryGetComponent(out Vertex vertex)) continue;
 
                 vertex.SetGizmosColor(editor.gizmosColor);
-                vertex.SetGizmosEdgeLength(maxEdgeLength);
+                //vertex.SetGizmosEdgeLength(maxEdgeLength);
                 vertex.SetShowGizmos(editor.showGizmos);
             }
         }
