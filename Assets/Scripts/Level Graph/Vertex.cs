@@ -1,9 +1,12 @@
 namespace LevelGraph {
+    using System;
     using System.Collections.Generic;
     using UnityEngine;
     
     public class Vertex : MonoBehaviour {
         [SerializeReference] List<Edge> edges = new List<Edge>();
+
+        public Action<Vertex> onBeforeDelete;
 
         public void Connect(Edge connectedEdge) {
             edges.Add(connectedEdge);
@@ -27,6 +30,12 @@ namespace LevelGraph {
 
         public void Copy(Vertex vertexToCopy) {
             edges = vertexToCopy.edges;
+        }
+
+        public void Delete() {
+            onBeforeDelete?.Invoke(this);
+
+            DestroyImmediate(gameObject);
         }
     }
 }

@@ -21,6 +21,8 @@ namespace LevelGraph {
             if(edges.Contains(edge)) return;
 
             edges.Add(edge);
+            edge.GetSource().onBeforeDelete = OnBeforeVertexDelete;
+            edge.GetTarget().onBeforeDelete = OnBeforeVertexDelete;
         }
 
         public void Clear() {
@@ -55,6 +57,12 @@ namespace LevelGraph {
                 total += edge.GetLength();
             }
             return total;
+        }
+
+        void OnBeforeVertexDelete(Vertex vertexToDelete) {
+            edges.RemoveAll((edge) => {
+                return edge.GetSource() == vertexToDelete || edge.GetTarget() == vertexToDelete;
+            });
         }
 
         void OnDrawGizmos() {
