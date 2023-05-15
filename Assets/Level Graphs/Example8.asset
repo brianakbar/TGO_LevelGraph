@@ -1,0 +1,863 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c213e2da7fd12849b2a9446dcbcdc49, type: 3}
+  m_Name: Example8
+  m_EditorClassIdentifier: 
+  vertices:
+  - position: {x: 2, y: 0.5, z: 26}
+    id: e5c8069d-ecc9-4262-8c69-b49158ca9a9f
+  - position: {x: 2, y: 0.5, z: 34}
+    id: 4460a7fa-7731-4cb9-9c43-38193353a63a
+  - position: {x: 10, y: 0.5, z: 26}
+    id: 9626768d-621b-4760-b554-94d7fc9a043f
+  - position: {x: 2, y: 0.5, z: 38}
+    id: 7de71c34-1047-4f25-bc31-da79770afd31
+  - position: {x: 14, y: 0.5, z: 34}
+    id: ffa512f2-209e-4383-8951-2daea230fbfd
+  - position: {x: 10, y: 0.5, z: 18}
+    id: ebddb1e6-23e3-4544-b476-8a983d7aae8c
+  - position: {x: 14, y: 0.5, z: 30}
+    id: 7fa96792-c3f2-4290-ba65-24d69b1d91b1
+  - position: {x: 22, y: 0.5, z: 34}
+    id: 4e291846-abf0-4de9-86ad-d48368dca9c2
+  - position: {x: 18, y: 0.5, z: 18}
+    id: 619c5b73-0af3-43f4-8dd5-7831f8ffd6f6
+  - position: {x: 26, y: 0.5, z: 34}
+    id: eb75e562-3ad3-4a7b-bbab-2e9b68e1a449
+  - position: {x: 22, y: 0.5, z: 42}
+    id: 482df9fd-0fce-4f6b-ab3f-248d54664b9f
+  - position: {x: 18, y: 0.5, z: 10}
+    id: c0e0c60c-4331-425d-9f4a-c8a68d0f071b
+  - position: {x: 26, y: 0.5, z: 18}
+    id: 9d698fea-729a-489e-bdde-9cff0f7ccac3
+  - position: {x: 34, y: 0.5, z: 34}
+    id: 9552afde-121c-4f18-80a6-3e5430a005c9
+  - position: {x: 34, y: 0.5, z: 30}
+    id: 8b12da00-aa47-4a06-b5d0-3f4c4359caa2
+  - position: {x: 34, y: 0.5, z: 38}
+    id: e3bf9cc2-0634-46db-a287-09181eda8a14
+  - position: {x: 22, y: 0.5, z: 46}
+    id: 89be64a6-ccdb-4243-832c-09fd3b04781b
+  - position: {x: 30, y: 0.5, z: 46}
+    id: d2a4bcff-13fb-4460-ac30-3586bfa2e848
+  - position: {x: 10, y: 0.5, z: 46}
+    id: 6906b5a0-c91d-4324-8d04-fc2802f5bbf0
+  - position: {x: 18, y: 0.5, z: 6}
+    id: cc310769-9a0d-43d9-8077-bab5ff28621a
+  - position: {x: 22, y: 0.5, z: 6}
+    id: d3c981de-3a2a-476f-891a-ed52f149c718
+  - position: {x: 22, y: 0.5, z: 10}
+    id: aec623dd-2142-462e-a322-a55ad6f74d02
+  - position: {x: 14, y: 0.5, z: 10}
+    id: a5558628-83ce-4197-b98e-0707ba788ecc
+  - position: {x: 26, y: 0.5, z: 14}
+    id: f689e0f8-90c8-49a5-a85d-274881679f0d
+  - position: {x: 34, y: 0.5, z: 18}
+    id: dec11b72-18f5-43fa-b6b0-67d91666b81e
+  - position: {x: 38, y: 0.5, z: 30}
+    id: b62e6f36-7a09-4cfe-befe-cf1b336c2c67
+  - position: {x: 34, y: 0.5, z: 46}
+    id: b5dcb47e-3cf7-4153-8174-17f150dcf91e
+  - position: {x: 30, y: 0.5, z: 38}
+    id: ec273738-4192-4dd1-b20b-912d2e8a4f32
+  - position: {x: 38, y: 0.5, z: 38}
+    id: 726f5534-b317-49f9-969b-ac72c47dbb72
+  - position: {x: 38, y: 0.5, z: 46}
+    id: 7d8159e6-5b7b-4364-b241-714a947647e5
+  - position: {x: 10, y: 0.5, z: 42}
+    id: 1fbdf6d0-126c-43bd-82f3-0c3204101d27
+  - position: {x: 6, y: 0.5, z: 42}
+    id: 14fcaf79-3438-492a-ae9b-0a02338bb986
+  - position: {x: 34, y: 0.5, z: 6}
+    id: 634ea678-2b72-4d33-98e3-7fc48304096f
+  - position: {x: 14, y: 0.5, z: 2}
+    id: b6c0407d-8f76-46ac-84e0-24235d5bef48
+  - position: {x: 46, y: 0.5, z: 30}
+    id: 89273424-1dd6-4508-87cc-4aeb19f19193
+  - position: {x: 34, y: 0.5, z: 58}
+    id: 1f6b9d51-f53b-4c0a-9090-2ddafe8e007e
+  - position: {x: 30, y: 0.5, z: 58}
+    id: 46bac97e-75ca-4894-a002-2c831a2f03bf
+  - position: {x: 38, y: 0.5, z: 58}
+    id: caeac0a9-e737-4309-ad3e-6c244bbb926e
+  - position: {x: 42, y: 0.5, z: 38}
+    id: 0bc3cd10-b22a-458e-9bb0-2288e765b7ac
+  - position: {x: 46, y: 0.5, z: 38}
+    id: fa3aa6a5-6e98-4a6b-a163-515922290636
+  - position: {x: 42, y: 0.5, z: 34}
+    id: 40435a6b-0d46-4571-a541-3f65e68eaa79
+  - position: {x: 42, y: 0.5, z: 42}
+    id: f561f5a4-0c28-41d5-9806-fd5c7304c32e
+  - position: {x: 38, y: 0.5, z: 50}
+    id: 251f10eb-7d5c-4730-a4ec-24a7c3129c0f
+  - position: {x: 10, y: 0.5, z: 58}
+    id: f222efc4-5db1-4565-b440-9d88a400bbb0
+  - position: {x: 14, y: 0.5, z: 58}
+    id: f5fd9d3f-1b4b-4fdc-88ef-721fb43f7892
+  - position: {x: 10, y: 0.5, z: 62}
+    id: a1dfcae9-420d-4ddb-8e82-e9406fd8cf1c
+  - position: {x: 6, y: 0.5, z: 50}
+    id: f2daad1a-8f99-42da-bc5e-74f3b2a54740
+  - position: {x: 42, y: 0.5, z: 58}
+    id: 12706dd4-91ec-48d6-8155-d24f65f9abd7
+  - position: {x: 42, y: 0.5, z: 62}
+    id: 31eca6bb-59c6-4675-8fb7-70d01b13300a
+  - position: {x: 42, y: 0.5, z: 54}
+    id: 97225de0-053f-43bc-aa3b-81588437737c
+  - position: {x: 38, y: 0.5, z: 54}
+    id: 0a8493ec-f506-41d8-894b-2bbc27a52c05
+  - position: {x: 46, y: 0.5, z: 50}
+    id: ef2c3c90-3689-407e-b7d8-9058940310e3
+  - position: {x: 50, y: 0.5, z: 38}
+    id: aa357a61-4aaf-4b47-a493-247694eed260
+  - position: {x: 54, y: 0.5, z: 42}
+    id: 8433c542-fe14-4664-a2c3-f458796935bf
+  - position: {x: 14, y: 0.5, z: 62}
+    id: eed9b4b2-375e-46ff-a759-9295e2074310
+  - position: {x: 6, y: 0.5, z: 62}
+    id: 0cf81c4d-bba0-45bc-b5d3-a0143188f48c
+  - position: {x: 6, y: 0.5, z: 54}
+    id: 841d8b81-c0cd-4376-80d1-0f2b5fd4b44f
+  - position: {x: 14, y: 0.5, z: 50}
+    id: 66be7544-cd79-48d2-a1a2-abee29f4d217
+  - position: {x: 38, y: 0.5, z: 62}
+    id: 35d6de1c-b244-41e8-9523-fdc79455894a
+  - position: {x: 42, y: 0.5, z: 66}
+    id: 67b768a3-bc7b-4296-89e9-52bdea3534bf
+  - position: {x: 38, y: 0.5, z: 70}
+    id: c57abb4a-2aef-424c-aaf5-e38647bc8393
+  - position: {x: 46, y: 0.5, z: 54}
+    id: 8acff004-4c86-4445-96ee-c0d49b1eec86
+  - position: {x: 50, y: 0.5, z: 34}
+    id: a2e35a5e-3a9f-44fd-b384-fde572a8c6e5
+  - position: {x: 50, y: 0.5, z: 26}
+    id: 5d961f3e-3956-4245-a6da-521f51fe555a
+  - position: {x: 14, y: 0.5, z: 70}
+    id: cfa1a91b-cba5-4160-85fb-9f5814ba6f86
+  - position: {x: 14, y: 0.5, z: 78}
+    id: 5491af50-2228-47dd-8e0a-cca8b0199030
+  - position: {x: 18, y: 0.5, z: 50}
+    id: 9d06163a-888b-4f72-aed8-1db10ba0b239
+  - position: {x: 18, y: 0.5, z: 62}
+    id: 7fbbc8dc-e20a-4571-813e-722ca848509b
+  - position: {x: 18, y: 0.5, z: 54}
+    id: 34163dea-84b6-465f-a6b5-9d3b71ae2896
+  - position: {x: 46, y: 0.5, z: 66}
+    id: c971ef85-85a1-40b8-bce4-af4f0c342c82
+  - position: {x: 46, y: 0.5, z: 62}
+    id: 2399f705-e3c3-4f99-ad13-f63f90bd70c9
+  - position: {x: 50, y: 0.5, z: 14}
+    id: 737f0789-7c29-47cb-82b2-29cc941507e4
+  - position: {x: 46, y: 0.5, z: 74}
+    id: 2aba6e80-8789-461e-9f49-c1b523f0b7c4
+  - position: {x: 2, y: 0.5, z: 70}
+    id: 554279ac-277a-4aed-ba7e-7c202c06cd07
+  - position: {x: 2, y: 0.5, z: 74}
+    id: 77416495-1a8c-4919-a0f6-871a369b3fd8
+  - position: {x: 10, y: 0.5, z: 78}
+    id: 293cb724-718c-4ceb-988f-c48970ffbcb8
+  - position: {x: 6, y: 0.5, z: 74}
+    id: c88f4e9e-0cb8-494e-a22e-18c42bd11371
+  - position: {x: 46, y: 0.5, z: 78}
+    id: 68c26ada-ff00-4049-8fd0-2a4aa6fc8ed5
+  - position: {x: 42, y: 0.5, z: 14}
+    id: 6c874170-65d0-48a5-b8bc-594ac29fea09
+  - position: {x: 54, y: 0.5, z: 78}
+    id: 28b7578f-02d4-4694-a09b-117f73cbb944
+  - position: {x: 2, y: 0.5, z: 82}
+    id: 5e144fd9-9d84-4222-a386-629ed1d8a82b
+  - position: {x: 2, y: 0.5, z: 78}
+    id: b3b8a509-e8f4-4937-a21e-a51598f4f31e
+  - position: {x: 14, y: 0.5, z: 90}
+    id: cdbf3368-57d7-4605-879d-cdb57ffcfcfc
+  - position: {x: 14, y: 0.5, z: 98}
+    id: 2479f735-3a2a-4ed8-9f05-743d4a364a89
+  - position: {x: 10, y: 0.5, z: 82}
+    id: d8d8f376-9f0f-4c59-aa02-d1db156d51e9
+  - position: {x: 54, y: 0.5, z: 90}
+    id: fe5b04f8-935a-4e7f-a353-2b05437ad5fa
+  - position: {x: 34, y: 0.5, z: 78}
+    id: 3212730e-bcea-4de6-84a1-86122fda4a3d
+  - position: {x: 30, y: 0.5, z: 78}
+    id: 7580a143-2250-4822-aaab-c07bf4480d66
+  - position: {x: 18, y: 0.5, z: 82}
+    id: 2f9b023b-0eeb-4f2f-b053-2018fba6007a
+  - position: {x: 18, y: 0.5, z: 98}
+    id: c98e1e7c-71e1-40bd-94c4-30438a0c54bf
+  - position: {x: 26, y: 0.5, z: 90}
+    id: f863cf51-8726-4a9d-80bd-7d130321aab9
+  - position: {x: 30, y: 0.5, z: 90}
+    id: 3eb74ee9-c584-440f-84db-86cb47e41ea8
+  - position: {x: 26, y: 0.5, z: 82}
+    id: aba26fdd-e78c-4ae3-9db8-bc25de181f09
+  - position: {x: 58, y: 0.5, z: 90}
+    id: 3ca35665-061a-4587-9cfd-9bd4286f6c59
+  - position: {x: 62, y: 0.5, z: 58}
+    id: 1df28511-fe7d-434f-9b9a-017937d198aa
+  - position: {x: 66, y: 0.5, z: 58}
+    id: ddc0c482-2373-414c-91a2-5cb4978b9191
+  - position: {x: 62, y: 0.5, z: 82}
+    id: 851594a5-e85f-4da9-abd7-24fb23aa2f7c
+  - position: {x: 62, y: 0.5, z: 86}
+    id: cdc57129-0959-48e2-b2db-f3709701e849
+  - position: {x: 30, y: 0.5, z: 74}
+    id: 3e0156ec-ee83-4946-9211-8ef16d7a516c
+  - position: {x: 18, y: 0.5, z: 70}
+    id: 585a5264-532a-4239-946d-ce18fe427f21
+  - position: {x: 18, y: 0.5, z: 94}
+    id: 7ac371cf-c128-469a-9b6f-280a4018adc7
+  - position: {x: 26, y: 0.5, z: 74}
+    id: f5593420-2ba6-4451-ae85-7bd51a1a5808
+  - position: {x: 62, y: 0.5, z: 90}
+    id: f723c542-4a31-4546-9c7c-8c93e022465b
+  - position: {x: 62, y: 0.5, z: 94}
+    id: 457482e7-c9b1-44df-b00a-d024f2c120ad
+  - position: {x: 58, y: 0.5, z: 86}
+    id: 8003e46a-e0d9-4b8a-9783-4e848c9a13ab
+  - position: {x: 78, y: 0.5, z: 70}
+    id: 0bde9db3-a537-4486-827b-224fb2a07af6
+  - position: {x: 78, y: 0.5, z: 62}
+    id: 5064196c-03c2-4742-82dd-84f224d8d1ca
+  - position: {x: 78, y: 0.5, z: 74}
+    id: 7577c6a5-f15b-4ea5-a825-eacd66fe1d53
+  - position: {x: 70, y: 0.5, z: 58}
+    id: e43386c2-6205-4fb7-8660-836ae4760f2d
+  - position: {x: 78, y: 0.5, z: 58}
+    id: cb481060-d6bb-46d1-ab50-3a37aeb66d6b
+  - position: {x: 62, y: 0.5, z: 98}
+    id: 741e6c6a-0f08-4d2e-a612-72a2040e31c5
+  - position: {x: 74, y: 0.5, z: 94}
+    id: 77d6ee0b-fa26-4614-aebf-bb163c34e4d4
+  - position: {x: 58, y: 0.5, z: 98}
+    id: 5e048057-2174-4dee-badf-1516de65a330
+  - position: {x: 70, y: 0.5, z: 90}
+    id: 3cd36d06-b16d-4a84-b7b4-da89cb55707b
+  - position: {x: 70, y: 0.5, z: 86}
+    id: 27b78d0b-fb16-4f78-8610-875770aaaa63
+  - position: {x: 74, y: 0.5, z: 90}
+    id: feb35154-2a1a-442e-9b5b-6945feca648a
+  - position: {x: 50, y: 0.5, z: 86}
+    id: 7afda803-6d67-4d20-bd11-48d13e9b41ff
+  - position: {x: 86, y: 0.5, z: 62}
+    id: 4df61217-6d71-4a81-be19-0091565fa7dd
+  - position: {x: 78, y: 0.5, z: 78}
+    id: 074ec31a-b6f1-4b2b-b26b-8456697c0390
+  - position: {x: 50, y: 0.5, z: 94}
+    id: fefbc307-9d8f-49ad-9ff3-7c5976c29315
+  - position: {x: 74, y: 0.5, z: 98}
+    id: 8ad89f20-99c6-4b37-bbf7-7e163b0ee312
+  - position: {x: 42, y: 0.5, z: 94}
+    id: f17d1b00-3042-4f99-a8fc-cf5989184a46
+  - position: {x: 70, y: 0.5, z: 82}
+    id: 5f059dca-3877-4a5a-9c06-82ff07848dcf
+  - position: {x: 78, y: 0.5, z: 90}
+    id: d228b71a-2474-4e3a-aec3-754c24240170
+  - position: {x: 86, y: 0.5, z: 66}
+    id: 9f0683d7-48f6-429c-b718-79f127c81f19
+  - position: {x: 86, y: 0.5, z: 54}
+    id: 501628ae-9682-4238-84a9-0ed4cb533672
+  - position: {x: 78, y: 0.5, z: 82}
+    id: 81933aa2-056e-46f1-8683-4c49b8913e2f
+  - position: {x: 82, y: 0.5, z: 82}
+    id: 55ceac05-f3f7-45f6-8704-e8dd24e3ae7c
+  - position: {x: 82, y: 0.5, z: 98}
+    id: 66dbb49c-08db-4a2b-863d-71dd0863d587
+  - position: {x: 82, y: 0.5, z: 86}
+    id: 255dc111-6063-486d-b119-27a54d0d4b78
+  - position: {x: 86, y: 0.5, z: 90}
+    id: 51958979-be3c-4e21-971b-30120499df7f
+  - position: {x: 90, y: 0.5, z: 90}
+    id: cfb5ce17-bad6-4211-bc07-5b41df94cd84
+  - position: {x: 86, y: 0.5, z: 70}
+    id: d026ab53-66ec-4c0a-bef8-c7f8a53bca43
+  - position: {x: 90, y: 0.5, z: 66}
+    id: 1e16f422-57d3-46d2-b2eb-8e965d99c157
+  - position: {x: 94, y: 0.5, z: 54}
+    id: da2aee1b-b03a-4fca-b3c2-bc41c871cb8d
+  - position: {x: 90, y: 0.5, z: 46}
+    id: c66b197c-18a2-4822-bfe2-aa9379c92f1e
+  - position: {x: 90, y: 0.5, z: 34}
+    id: b487b293-deee-4507-963f-fe57a1998638
+  - position: {x: 94, y: 0.5, z: 46}
+    id: 10987068-04bf-4b9a-af89-999297348119
+  - position: {x: 94, y: 0.5, z: 66}
+    id: 9c713291-3533-4d0c-b2c9-b47268768e73
+  - position: {x: 90, y: 0.5, z: 82}
+    id: 3ae7cc71-2708-443f-b4a2-beba3bd88b9d
+  - position: {x: 98, y: 0.5, z: 90}
+    id: 4b762e66-a276-476c-b381-6cd53bddc586
+  - position: {x: 90, y: 0.5, z: 26}
+    id: 87de7ca3-cb30-44e4-b53f-ef77bdd2e88e
+  - position: {x: 98, y: 0.5, z: 46}
+    id: 0fc76cbb-290a-487d-b732-8ed2442d4136
+  - position: {x: 98, y: 0.5, z: 50}
+    id: f548e41c-20dc-4f9c-881b-f452afd89cef
+  - position: {x: 94, y: 0.5, z: 42}
+    id: 85a569bd-ea09-4cc8-ad97-c00f66e57472
+  - position: {x: 94, y: 0.5, z: 70}
+    id: 7744c721-b4cb-4007-b82e-8361e3056039
+  - position: {x: 90, y: 0.5, z: 22}
+    id: 75d1d388-3bbc-4c30-8547-39a1c8edb71a
+  - position: {x: 94, y: 0.5, z: 26}
+    id: 2e2d6849-8380-4163-865c-b80cbe853fd1
+  - position: {x: 90, y: 0.5, z: 14}
+    id: 1130a837-090b-47e8-9a1c-dc8b6f801d74
+  - position: {x: 98, y: 0.5, z: 62}
+    id: ed15dc21-ac90-47d8-bd2f-4b098798fae7
+  - position: {x: 82, y: 0.5, z: 14}
+    id: 605ebc84-11d6-40d9-af8e-5ae4ee5c1a26
+  - position: {x: 86, y: 0.5, z: 14}
+    id: e8090d60-2277-4255-b20e-fba92c66b4ed
+  - position: {x: 94, y: 0.5, z: 22}
+    id: 15d88ddf-38d3-462d-8fb0-bb5045338189
+  - position: {x: 94, y: 0.5, z: 18}
+    id: 13738391-1518-4d2a-a445-3a456f572651
+  - position: {x: 98, y: 0.5, z: 22}
+    id: a4ae7e8d-61f4-4df8-8e9b-90ccc23dba2c
+  - position: {x: 82, y: 0.5, z: 10}
+    id: 72128b81-c975-4cea-9d7b-c00099bcf616
+  - position: {x: 94, y: 0.5, z: 10}
+    id: c23ad4f7-259e-412d-9a9f-31b85bf716f0
+  - position: {x: 98, y: 0.5, z: 2}
+    id: e227cb12-e89d-4821-9209-d8cf537e7037
+  - position: {x: 94, y: 0.5, z: 2}
+    id: 3d2178ac-1f96-41d4-931c-5199b90fae02
+  - position: {x: 78, y: 0.5, z: 10}
+    id: 01425176-ee3f-4c21-8bfb-4850257ef525
+  - position: {x: 82, y: 0.5, z: 2}
+    id: f43db3ba-ede6-4563-82a7-f0ecd31fde30
+  - position: {x: 82, y: 0.5, z: 6}
+    id: 1beaba18-892b-4b05-99c6-8a53dea2def3
+  - position: {x: 86, y: 0.5, z: 2}
+    id: 900bbc0a-4039-4e10-b823-c30b69f3824f
+  - position: {x: 74, y: 0.5, z: 10}
+    id: f60c8b3d-4099-413f-bd7d-48cd15c15369
+  - position: {x: 74, y: 0.5, z: 6}
+    id: c7393503-e735-4f54-a30c-19b7dce5115e
+  - position: {x: 78, y: 0.5, z: 2}
+    id: a4cd4af8-b5d8-4caf-bed2-4cf77e587c64
+  - position: {x: 70, y: 0.5, z: 6}
+    id: 9d00fc80-6121-4ec7-ab30-52122afe7289
+  - position: {x: 66, y: 0.5, z: 6}
+    id: 862ba0cd-a40b-47c6-8208-ed85b5e588b0
+  - position: {x: 74, y: 0.5, z: 2}
+    id: 204a3c47-b5a2-41fd-9bfc-0966abeae72b
+  - position: {x: 62, y: 0.5, z: 6}
+    id: 05efd489-03df-4d8f-9730-80f5ec17e20a
+  edges:
+  - weight: 5
+    source: e5c8069d-ecc9-4262-8c69-b49158ca9a9f
+    target: 4460a7fa-7731-4cb9-9c43-38193353a63a
+  - weight: 5
+    source: e5c8069d-ecc9-4262-8c69-b49158ca9a9f
+    target: 9626768d-621b-4760-b554-94d7fc9a043f
+  - weight: 2
+    source: 7de71c34-1047-4f25-bc31-da79770afd31
+    target: 4460a7fa-7731-4cb9-9c43-38193353a63a
+  - weight: 6
+    source: 4460a7fa-7731-4cb9-9c43-38193353a63a
+    target: ffa512f2-209e-4383-8951-2daea230fbfd
+  - weight: 5
+    source: 9626768d-621b-4760-b554-94d7fc9a043f
+    target: ebddb1e6-23e3-4544-b476-8a983d7aae8c
+  - weight: 2
+    source: ffa512f2-209e-4383-8951-2daea230fbfd
+    target: 7fa96792-c3f2-4290-ba65-24d69b1d91b1
+  - weight: 5
+    source: ffa512f2-209e-4383-8951-2daea230fbfd
+    target: 4e291846-abf0-4de9-86ad-d48368dca9c2
+  - weight: 5
+    source: ebddb1e6-23e3-4544-b476-8a983d7aae8c
+    target: 619c5b73-0af3-43f4-8dd5-7831f8ffd6f6
+  - weight: 2
+    source: eb75e562-3ad3-4a7b-bbab-2e9b68e1a449
+    target: 4e291846-abf0-4de9-86ad-d48368dca9c2
+  - weight: 5
+    source: 4e291846-abf0-4de9-86ad-d48368dca9c2
+    target: 482df9fd-0fce-4f6b-ab3f-248d54664b9f
+  - weight: 5
+    source: 619c5b73-0af3-43f4-8dd5-7831f8ffd6f6
+    target: c0e0c60c-4331-425d-9f4a-c8a68d0f071b
+  - weight: 5
+    source: 619c5b73-0af3-43f4-8dd5-7831f8ffd6f6
+    target: 9d698fea-729a-489e-bdde-9cff0f7ccac3
+  - weight: 2
+    source: 9552afde-121c-4f18-80a6-3e5430a005c9
+    target: 8b12da00-aa47-4a06-b5d0-3f4c4359caa2
+  - weight: 2
+    source: 9552afde-121c-4f18-80a6-3e5430a005c9
+    target: e3bf9cc2-0634-46db-a287-09181eda8a14
+  - weight: 2
+    source: 89be64a6-ccdb-4243-832c-09fd3b04781b
+    target: 482df9fd-0fce-4f6b-ab3f-248d54664b9f
+  - weight: 5
+    source: 89be64a6-ccdb-4243-832c-09fd3b04781b
+    target: d2a4bcff-13fb-4460-ac30-3586bfa2e848
+  - weight: 6
+    source: 89be64a6-ccdb-4243-832c-09fd3b04781b
+    target: 6906b5a0-c91d-4324-8d04-fc2802f5bbf0
+  - weight: 2
+    source: cc310769-9a0d-43d9-8077-bab5ff28621a
+    target: d3c981de-3a2a-476f-891a-ed52f149c718
+  - weight: 2
+    source: cc310769-9a0d-43d9-8077-bab5ff28621a
+    target: c0e0c60c-4331-425d-9f4a-c8a68d0f071b
+  - weight: 2
+    source: c0e0c60c-4331-425d-9f4a-c8a68d0f071b
+    target: aec623dd-2142-462e-a322-a55ad6f74d02
+  - weight: 2
+    source: c0e0c60c-4331-425d-9f4a-c8a68d0f071b
+    target: a5558628-83ce-4197-b98e-0707ba788ecc
+  - weight: 2
+    source: 9d698fea-729a-489e-bdde-9cff0f7ccac3
+    target: f689e0f8-90c8-49a5-a85d-274881679f0d
+  - weight: 5
+    source: 9d698fea-729a-489e-bdde-9cff0f7ccac3
+    target: dec11b72-18f5-43fa-b6b0-67d91666b81e
+  - weight: 2
+    source: 8b12da00-aa47-4a06-b5d0-3f4c4359caa2
+    target: b62e6f36-7a09-4cfe-befe-cf1b336c2c67
+  - weight: 2
+    source: b5dcb47e-3cf7-4153-8174-17f150dcf91e
+    target: d2a4bcff-13fb-4460-ac30-3586bfa2e848
+  - weight: 5
+    source: b5dcb47e-3cf7-4153-8174-17f150dcf91e
+    target: e3bf9cc2-0634-46db-a287-09181eda8a14
+  - weight: 2
+    source: e3bf9cc2-0634-46db-a287-09181eda8a14
+    target: ec273738-4192-4dd1-b20b-912d2e8a4f32
+  - weight: 2
+    source: e3bf9cc2-0634-46db-a287-09181eda8a14
+    target: 726f5534-b317-49f9-969b-ac72c47dbb72
+  - weight: 5
+    source: d2a4bcff-13fb-4460-ac30-3586bfa2e848
+    target: 7d8159e6-5b7b-4364-b241-714a947647e5
+  - weight: 2
+    source: 6906b5a0-c91d-4324-8d04-fc2802f5bbf0
+    target: 1fbdf6d0-126c-43bd-82f3-0c3204101d27
+  - weight: 2
+    source: 1fbdf6d0-126c-43bd-82f3-0c3204101d27
+    target: 14fcaf79-3438-492a-ae9b-0a02338bb986
+  - weight: 6
+    source: d3c981de-3a2a-476f-891a-ed52f149c718
+    target: 634ea678-2b72-4d33-98e3-7fc48304096f
+  - weight: 5
+    source: a5558628-83ce-4197-b98e-0707ba788ecc
+    target: b6c0407d-8f76-46ac-84e0-24235d5bef48
+  - weight: 5
+    source: b62e6f36-7a09-4cfe-befe-cf1b336c2c67
+    target: 89273424-1dd6-4508-87cc-4aeb19f19193
+  - weight: 2
+    source: 1f6b9d51-f53b-4c0a-9090-2ddafe8e007e
+    target: 46bac97e-75ca-4894-a002-2c831a2f03bf
+  - weight: 2
+    source: 1f6b9d51-f53b-4c0a-9090-2ddafe8e007e
+    target: caeac0a9-e737-4309-ad3e-6c244bbb926e
+  - weight: 2
+    source: 726f5534-b317-49f9-969b-ac72c47dbb72
+    target: 0bc3cd10-b22a-458e-9bb0-2288e765b7ac
+  - weight: 2
+    source: 0bc3cd10-b22a-458e-9bb0-2288e765b7ac
+    target: fa3aa6a5-6e98-4a6b-a163-515922290636
+  - weight: 2
+    source: 0bc3cd10-b22a-458e-9bb0-2288e765b7ac
+    target: 40435a6b-0d46-4571-a541-3f65e68eaa79
+  - weight: 2
+    source: 0bc3cd10-b22a-458e-9bb0-2288e765b7ac
+    target: f561f5a4-0c28-41d5-9806-fd5c7304c32e
+  - weight: 2
+    source: 7d8159e6-5b7b-4364-b241-714a947647e5
+    target: 251f10eb-7d5c-4730-a4ec-24a7c3129c0f
+  - weight: 2
+    source: f222efc4-5db1-4565-b440-9d88a400bbb0
+    target: f5fd9d3f-1b4b-4fdc-88ef-721fb43f7892
+  - weight: 2
+    source: f222efc4-5db1-4565-b440-9d88a400bbb0
+    target: a1dfcae9-420d-4ddb-8e82-e9406fd8cf1c
+  - weight: 5
+    source: 14fcaf79-3438-492a-ae9b-0a02338bb986
+    target: f2daad1a-8f99-42da-bc5e-74f3b2a54740
+  - weight: 2
+    source: 12706dd4-91ec-48d6-8155-d24f65f9abd7
+    target: caeac0a9-e737-4309-ad3e-6c244bbb926e
+  - weight: 2
+    source: 12706dd4-91ec-48d6-8155-d24f65f9abd7
+    target: 31eca6bb-59c6-4675-8fb7-70d01b13300a
+  - weight: 2
+    source: 12706dd4-91ec-48d6-8155-d24f65f9abd7
+    target: 97225de0-053f-43bc-aa3b-81588437737c
+  - weight: 2
+    source: 251f10eb-7d5c-4730-a4ec-24a7c3129c0f
+    target: 0a8493ec-f506-41d8-894b-2bbc27a52c05
+  - weight: 5
+    source: 251f10eb-7d5c-4730-a4ec-24a7c3129c0f
+    target: ef2c3c90-3689-407e-b7d8-9058940310e3
+  - weight: 2
+    source: fa3aa6a5-6e98-4a6b-a163-515922290636
+    target: aa357a61-4aaf-4b47-a493-247694eed260
+  - weight: 6
+    source: f561f5a4-0c28-41d5-9806-fd5c7304c32e
+    target: 8433c542-fe14-4664-a2c3-f458796935bf
+  - weight: 2
+    source: 0a8493ec-f506-41d8-894b-2bbc27a52c05
+    target: 97225de0-053f-43bc-aa3b-81588437737c
+  - weight: 2
+    source: a1dfcae9-420d-4ddb-8e82-e9406fd8cf1c
+    target: eed9b4b2-375e-46ff-a759-9295e2074310
+  - weight: 2
+    source: a1dfcae9-420d-4ddb-8e82-e9406fd8cf1c
+    target: 0cf81c4d-bba0-45bc-b5d3-a0143188f48c
+  - weight: 5
+    source: 841d8b81-c0cd-4376-80d1-0f2b5fd4b44f
+    target: 0cf81c4d-bba0-45bc-b5d3-a0143188f48c
+  - weight: 2
+    source: 841d8b81-c0cd-4376-80d1-0f2b5fd4b44f
+    target: f2daad1a-8f99-42da-bc5e-74f3b2a54740
+  - weight: 5
+    source: f2daad1a-8f99-42da-bc5e-74f3b2a54740
+    target: 66be7544-cd79-48d2-a1a2-abee29f4d217
+  - weight: 2
+    source: 31eca6bb-59c6-4675-8fb7-70d01b13300a
+    target: 35d6de1c-b244-41e8-9523-fdc79455894a
+  - weight: 2
+    source: 31eca6bb-59c6-4675-8fb7-70d01b13300a
+    target: 67b768a3-bc7b-4296-89e9-52bdea3534bf
+  - weight: 5
+    source: 35d6de1c-b244-41e8-9523-fdc79455894a
+    target: c57abb4a-2aef-424c-aaf5-e38647bc8393
+  - weight: 2
+    source: ef2c3c90-3689-407e-b7d8-9058940310e3
+    target: 8acff004-4c86-4445-96ee-c0d49b1eec86
+  - weight: 2
+    source: aa357a61-4aaf-4b47-a493-247694eed260
+    target: a2e35a5e-3a9f-44fd-b384-fde572a8c6e5
+  - weight: 5
+    source: a2e35a5e-3a9f-44fd-b384-fde572a8c6e5
+    target: 5d961f3e-3956-4245-a6da-521f51fe555a
+  - weight: 5
+    source: cfa1a91b-cba5-4160-85fb-9f5814ba6f86
+    target: 5491af50-2228-47dd-8e0a-cca8b0199030
+  - weight: 5
+    source: cfa1a91b-cba5-4160-85fb-9f5814ba6f86
+    target: eed9b4b2-375e-46ff-a759-9295e2074310
+  - weight: 2
+    source: 66be7544-cd79-48d2-a1a2-abee29f4d217
+    target: 9d06163a-888b-4f72-aed8-1db10ba0b239
+  - weight: 2
+    source: eed9b4b2-375e-46ff-a759-9295e2074310
+    target: 7fbbc8dc-e20a-4571-813e-722ca848509b
+  - weight: 2
+    source: 34163dea-84b6-465f-a6b5-9d3b71ae2896
+    target: 9d06163a-888b-4f72-aed8-1db10ba0b239
+  - weight: 2
+    source: 67b768a3-bc7b-4296-89e9-52bdea3534bf
+    target: c971ef85-85a1-40b8-bce4-af4f0c342c82
+  - weight: 2
+    source: 2399f705-e3c3-4f99-ad13-f63f90bd70c9
+    target: c971ef85-85a1-40b8-bce4-af4f0c342c82
+  - weight: 6
+    source: 5d961f3e-3956-4245-a6da-521f51fe555a
+    target: 737f0789-7c29-47cb-82b2-29cc941507e4
+  - weight: 5
+    source: c971ef85-85a1-40b8-bce4-af4f0c342c82
+    target: 2aba6e80-8789-461e-9f49-c1b523f0b7c4
+  - weight: 2
+    source: 554279ac-277a-4aed-ba7e-7c202c06cd07
+    target: 77416495-1a8c-4919-a0f6-871a369b3fd8
+  - weight: 2
+    source: 5491af50-2228-47dd-8e0a-cca8b0199030
+    target: 293cb724-718c-4ceb-988f-c48970ffbcb8
+  - weight: 2
+    source: c88f4e9e-0cb8-494e-a22e-18c42bd11371
+    target: 77416495-1a8c-4919-a0f6-871a369b3fd8
+  - weight: 2
+    source: 2aba6e80-8789-461e-9f49-c1b523f0b7c4
+    target: 68c26ada-ff00-4049-8fd0-2a4aa6fc8ed5
+  - weight: 5
+    source: 737f0789-7c29-47cb-82b2-29cc941507e4
+    target: 6c874170-65d0-48a5-b8bc-594ac29fea09
+  - weight: 5
+    source: 68c26ada-ff00-4049-8fd0-2a4aa6fc8ed5
+    target: 28b7578f-02d4-4694-a09b-117f73cbb944
+  - weight: 2
+    source: 5e144fd9-9d84-4222-a386-629ed1d8a82b
+    target: b3b8a509-e8f4-4937-a21e-a51598f4f31e
+  - weight: 5
+    source: b3b8a509-e8f4-4937-a21e-a51598f4f31e
+    target: 293cb724-718c-4ceb-988f-c48970ffbcb8
+  - weight: 2
+    source: b3b8a509-e8f4-4937-a21e-a51598f4f31e
+    target: 77416495-1a8c-4919-a0f6-871a369b3fd8
+  - weight: 5
+    source: cdbf3368-57d7-4605-879d-cdb57ffcfcfc
+    target: 2479f735-3a2a-4ed8-9f05-743d4a364a89
+  - weight: 2
+    source: 293cb724-718c-4ceb-988f-c48970ffbcb8
+    target: d8d8f376-9f0f-4c59-aa02-d1db156d51e9
+  - weight: 6
+    source: 28b7578f-02d4-4694-a09b-117f73cbb944
+    target: fe5b04f8-935a-4e7f-a353-2b05437ad5fa
+  - weight: 2
+    source: 3212730e-bcea-4de6-84a1-86122fda4a3d
+    target: 7580a143-2250-4822-aaab-c07bf4480d66
+  - weight: 5
+    source: d8d8f376-9f0f-4c59-aa02-d1db156d51e9
+    target: 2f9b023b-0eeb-4f2f-b053-2018fba6007a
+  - weight: 2
+    source: 2479f735-3a2a-4ed8-9f05-743d4a364a89
+    target: c98e1e7c-71e1-40bd-94c4-30438a0c54bf
+  - weight: 2
+    source: f863cf51-8726-4a9d-80bd-7d130321aab9
+    target: 3eb74ee9-c584-440f-84db-86cb47e41ea8
+  - weight: 5
+    source: f863cf51-8726-4a9d-80bd-7d130321aab9
+    target: aba26fdd-e78c-4ae3-9db8-bc25de181f09
+  - weight: 2
+    source: fe5b04f8-935a-4e7f-a353-2b05437ad5fa
+    target: 3ca35665-061a-4587-9cfd-9bd4286f6c59
+  - weight: 2
+    source: 1df28511-fe7d-434f-9b9a-017937d198aa
+    target: ddc0c482-2373-414c-91a2-5cb4978b9191
+  - weight: 2
+    source: 851594a5-e85f-4da9-abd7-24fb23aa2f7c
+    target: cdc57129-0959-48e2-b2db-f3709701e849
+  - weight: 2
+    source: 7580a143-2250-4822-aaab-c07bf4480d66
+    target: 3e0156ec-ee83-4946-9211-8ef16d7a516c
+  - weight: 6
+    source: 2f9b023b-0eeb-4f2f-b053-2018fba6007a
+    target: 585a5264-532a-4239-946d-ce18fe427f21
+  - weight: 6
+    source: 2f9b023b-0eeb-4f2f-b053-2018fba6007a
+    target: 7ac371cf-c128-469a-9b6f-280a4018adc7
+  - weight: 5
+    source: 2f9b023b-0eeb-4f2f-b053-2018fba6007a
+    target: aba26fdd-e78c-4ae3-9db8-bc25de181f09
+  - weight: 2
+    source: c98e1e7c-71e1-40bd-94c4-30438a0c54bf
+    target: 7ac371cf-c128-469a-9b6f-280a4018adc7
+  - weight: 5
+    source: aba26fdd-e78c-4ae3-9db8-bc25de181f09
+    target: f5593420-2ba6-4451-ae85-7bd51a1a5808
+  - weight: 2
+    source: f723c542-4a31-4546-9c7c-8c93e022465b
+    target: 3ca35665-061a-4587-9cfd-9bd4286f6c59
+  - weight: 2
+    source: f723c542-4a31-4546-9c7c-8c93e022465b
+    target: 457482e7-c9b1-44df-b00a-d024f2c120ad
+  - weight: 2
+    source: 3ca35665-061a-4587-9cfd-9bd4286f6c59
+    target: 8003e46a-e0d9-4b8a-9783-4e848c9a13ab
+  - weight: 5
+    source: 0bde9db3-a537-4486-827b-224fb2a07af6
+    target: 5064196c-03c2-4742-82dd-84f224d8d1ca
+  - weight: 2
+    source: 0bde9db3-a537-4486-827b-224fb2a07af6
+    target: 7577c6a5-f15b-4ea5-a825-eacd66fe1d53
+  - weight: 2
+    source: ddc0c482-2373-414c-91a2-5cb4978b9191
+    target: e43386c2-6205-4fb7-8660-836ae4760f2d
+  - weight: 5
+    source: e43386c2-6205-4fb7-8660-836ae4760f2d
+    target: cb481060-d6bb-46d1-ab50-3a37aeb66d6b
+  - weight: 2
+    source: cdc57129-0959-48e2-b2db-f3709701e849
+    target: 8003e46a-e0d9-4b8a-9783-4e848c9a13ab
+  - weight: 2
+    source: 457482e7-c9b1-44df-b00a-d024f2c120ad
+    target: 741e6c6a-0f08-4d2e-a612-72a2040e31c5
+  - weight: 6
+    source: 457482e7-c9b1-44df-b00a-d024f2c120ad
+    target: 77d6ee0b-fa26-4614-aebf-bb163c34e4d4
+  - weight: 2
+    source: 3e0156ec-ee83-4946-9211-8ef16d7a516c
+    target: f5593420-2ba6-4451-ae85-7bd51a1a5808
+  - weight: 2
+    source: 5e048057-2174-4dee-badf-1516de65a330
+    target: 741e6c6a-0f08-4d2e-a612-72a2040e31c5
+  - weight: 2
+    source: 3cd36d06-b16d-4a84-b7b4-da89cb55707b
+    target: 27b78d0b-fb16-4f78-8610-875770aaaa63
+  - weight: 2
+    source: 3cd36d06-b16d-4a84-b7b4-da89cb55707b
+    target: feb35154-2a1a-442e-9b5b-6945feca648a
+  - weight: 5
+    source: 8003e46a-e0d9-4b8a-9783-4e848c9a13ab
+    target: 7afda803-6d67-4d20-bd11-48d13e9b41ff
+  - weight: 2
+    source: 5064196c-03c2-4742-82dd-84f224d8d1ca
+    target: cb481060-d6bb-46d1-ab50-3a37aeb66d6b
+  - weight: 5
+    source: 5064196c-03c2-4742-82dd-84f224d8d1ca
+    target: 4df61217-6d71-4a81-be19-0091565fa7dd
+  - weight: 2
+    source: 7577c6a5-f15b-4ea5-a825-eacd66fe1d53
+    target: 074ec31a-b6f1-4b2b-b26b-8456697c0390
+  - weight: 5
+    source: 7afda803-6d67-4d20-bd11-48d13e9b41ff
+    target: fefbc307-9d8f-49ad-9ff3-7c5976c29315
+  - weight: 2
+    source: 77d6ee0b-fa26-4614-aebf-bb163c34e4d4
+    target: 8ad89f20-99c6-4b37-bbf7-7e163b0ee312
+  - weight: 2
+    source: 77d6ee0b-fa26-4614-aebf-bb163c34e4d4
+    target: feb35154-2a1a-442e-9b5b-6945feca648a
+  - weight: 5
+    source: fefbc307-9d8f-49ad-9ff3-7c5976c29315
+    target: f17d1b00-3042-4f99-a8fc-cf5989184a46
+  - weight: 2
+    source: 5f059dca-3877-4a5a-9c06-82ff07848dcf
+    target: 27b78d0b-fb16-4f78-8610-875770aaaa63
+  - weight: 2
+    source: feb35154-2a1a-442e-9b5b-6945feca648a
+    target: d228b71a-2474-4e3a-aec3-754c24240170
+  - weight: 2
+    source: 4df61217-6d71-4a81-be19-0091565fa7dd
+    target: 9f0683d7-48f6-429c-b718-79f127c81f19
+  - weight: 5
+    source: 4df61217-6d71-4a81-be19-0091565fa7dd
+    target: 501628ae-9682-4238-84a9-0ed4cb533672
+  - weight: 2
+    source: 074ec31a-b6f1-4b2b-b26b-8456697c0390
+    target: 81933aa2-056e-46f1-8683-4c49b8913e2f
+  - weight: 5
+    source: 81933aa2-056e-46f1-8683-4c49b8913e2f
+    target: d228b71a-2474-4e3a-aec3-754c24240170
+  - weight: 2
+    source: 81933aa2-056e-46f1-8683-4c49b8913e2f
+    target: 55ceac05-f3f7-45f6-8704-e8dd24e3ae7c
+  - weight: 5
+    source: 8ad89f20-99c6-4b37-bbf7-7e163b0ee312
+    target: 66dbb49c-08db-4a2b-863d-71dd0863d587
+  - weight: 2
+    source: 55ceac05-f3f7-45f6-8704-e8dd24e3ae7c
+    target: 255dc111-6063-486d-b119-27a54d0d4b78
+  - weight: 5
+    source: d228b71a-2474-4e3a-aec3-754c24240170
+    target: 51958979-be3c-4e21-971b-30120499df7f
+  - weight: 2
+    source: 51958979-be3c-4e21-971b-30120499df7f
+    target: cfb5ce17-bad6-4211-bc07-5b41df94cd84
+  - weight: 2
+    source: 9f0683d7-48f6-429c-b718-79f127c81f19
+    target: d026ab53-66ec-4c0a-bef8-c7f8a53bca43
+  - weight: 2
+    source: 9f0683d7-48f6-429c-b718-79f127c81f19
+    target: 1e16f422-57d3-46d2-b2eb-8e965d99c157
+  - weight: 5
+    source: 501628ae-9682-4238-84a9-0ed4cb533672
+    target: da2aee1b-b03a-4fca-b3c2-bc41c871cb8d
+  - weight: 6
+    source: c66b197c-18a2-4822-bfe2-aa9379c92f1e
+    target: b487b293-deee-4507-963f-fe57a1998638
+  - weight: 2
+    source: c66b197c-18a2-4822-bfe2-aa9379c92f1e
+    target: 10987068-04bf-4b9a-af89-999297348119
+  - weight: 2
+    source: 1e16f422-57d3-46d2-b2eb-8e965d99c157
+    target: 9c713291-3533-4d0c-b2c9-b47268768e73
+  - weight: 5
+    source: 3ae7cc71-2708-443f-b4a2-beba3bd88b9d
+    target: cfb5ce17-bad6-4211-bc07-5b41df94cd84
+  - weight: 5
+    source: cfb5ce17-bad6-4211-bc07-5b41df94cd84
+    target: 4b762e66-a276-476c-b381-6cd53bddc586
+  - weight: 5
+    source: da2aee1b-b03a-4fca-b3c2-bc41c871cb8d
+    target: 10987068-04bf-4b9a-af89-999297348119
+  - weight: 5
+    source: b487b293-deee-4507-963f-fe57a1998638
+    target: 87de7ca3-cb30-44e4-b53f-ef77bdd2e88e
+  - weight: 2
+    source: 0fc76cbb-290a-487d-b732-8ed2442d4136
+    target: f548e41c-20dc-4f9c-881b-f452afd89cef
+  - weight: 2
+    source: 0fc76cbb-290a-487d-b732-8ed2442d4136
+    target: 10987068-04bf-4b9a-af89-999297348119
+  - weight: 2
+    source: 10987068-04bf-4b9a-af89-999297348119
+    target: 85a569bd-ea09-4cc8-ad97-c00f66e57472
+  - weight: 2
+    source: 9c713291-3533-4d0c-b2c9-b47268768e73
+    target: 7744c721-b4cb-4007-b82e-8361e3056039
+  - weight: 2
+    source: 87de7ca3-cb30-44e4-b53f-ef77bdd2e88e
+    target: 75d1d388-3bbc-4c30-8547-39a1c8edb71a
+  - weight: 2
+    source: 87de7ca3-cb30-44e4-b53f-ef77bdd2e88e
+    target: 2e2d6849-8380-4163-865c-b80cbe853fd1
+  - weight: 5
+    source: 75d1d388-3bbc-4c30-8547-39a1c8edb71a
+    target: 1130a837-090b-47e8-9a1c-dc8b6f801d74
+  - weight: 6
+    source: f548e41c-20dc-4f9c-881b-f452afd89cef
+    target: ed15dc21-ac90-47d8-bd2f-4b098798fae7
+  - weight: 5
+    source: 1130a837-090b-47e8-9a1c-dc8b6f801d74
+    target: 605ebc84-11d6-40d9-af8e-5ae4ee5c1a26
+  - weight: 2
+    source: 1130a837-090b-47e8-9a1c-dc8b6f801d74
+    target: e8090d60-2277-4255-b20e-fba92c66b4ed
+  - weight: 2
+    source: 2e2d6849-8380-4163-865c-b80cbe853fd1
+    target: 15d88ddf-38d3-462d-8fb0-bb5045338189
+  - weight: 2
+    source: 15d88ddf-38d3-462d-8fb0-bb5045338189
+    target: 13738391-1518-4d2a-a445-3a456f572651
+  - weight: 2
+    source: 15d88ddf-38d3-462d-8fb0-bb5045338189
+    target: a4ae7e8d-61f4-4df8-8e9b-90ccc23dba2c
+  - weight: 2
+    source: 605ebc84-11d6-40d9-af8e-5ae4ee5c1a26
+    target: 72128b81-c975-4cea-9d7b-c00099bcf616
+  - weight: 5
+    source: 13738391-1518-4d2a-a445-3a456f572651
+    target: c23ad4f7-259e-412d-9a9f-31b85bf716f0
+  - weight: 2
+    source: e227cb12-e89d-4821-9209-d8cf537e7037
+    target: 3d2178ac-1f96-41d4-931c-5199b90fae02
+  - weight: 2
+    source: 72128b81-c975-4cea-9d7b-c00099bcf616
+    target: 01425176-ee3f-4c21-8bfb-4850257ef525
+  - weight: 5
+    source: 72128b81-c975-4cea-9d7b-c00099bcf616
+    target: f43db3ba-ede6-4563-82a7-f0ecd31fde30
+  - weight: 2
+    source: 1beaba18-892b-4b05-99c6-8a53dea2def3
+    target: f43db3ba-ede6-4563-82a7-f0ecd31fde30
+  - weight: 2
+    source: f43db3ba-ede6-4563-82a7-f0ecd31fde30
+    target: 900bbc0a-4039-4e10-b823-c30b69f3824f
+  - weight: 5
+    source: 900bbc0a-4039-4e10-b823-c30b69f3824f
+    target: 3d2178ac-1f96-41d4-931c-5199b90fae02
+  - weight: 2
+    source: f60c8b3d-4099-413f-bd7d-48cd15c15369
+    target: 01425176-ee3f-4c21-8bfb-4850257ef525
+  - weight: 2
+    source: f60c8b3d-4099-413f-bd7d-48cd15c15369
+    target: c7393503-e735-4f54-a30c-19b7dce5115e
+  - weight: 5
+    source: 01425176-ee3f-4c21-8bfb-4850257ef525
+    target: a4cd4af8-b5d8-4caf-bed2-4cf77e587c64
+  - weight: 2
+    source: c7393503-e735-4f54-a30c-19b7dce5115e
+    target: 9d00fc80-6121-4ec7-ab30-52122afe7289
+  - weight: 2
+    source: 9d00fc80-6121-4ec7-ab30-52122afe7289
+    target: 862ba0cd-a40b-47c6-8208-ed85b5e588b0
+  - weight: 2
+    source: 204a3c47-b5a2-41fd-9bfc-0966abeae72b
+    target: a4cd4af8-b5d8-4caf-bed2-4cf77e587c64
+  - weight: 2
+    source: 05efd489-03df-4d8f-9730-80f5ec17e20a
+    target: 862ba0cd-a40b-47c6-8208-ed85b5e588b0

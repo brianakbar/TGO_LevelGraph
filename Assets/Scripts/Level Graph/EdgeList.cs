@@ -23,10 +23,16 @@ namespace LevelGraph {
             edges.Add(edge);
             edge.GetSource().onBeforeDelete = OnBeforeVertexDelete;
             edge.GetTarget().onBeforeDelete = OnBeforeVertexDelete;
+
+            EditorUtility.SetDirty(this);
+            AssetDatabase.SaveAssets();
         }
 
         public void Clear() {
             edges.Clear();
+
+            EditorUtility.SetDirty(this);
+            AssetDatabase.SaveAssets();
         }
 
         public IEnumerable<Edge> GetEdges() {
@@ -45,6 +51,9 @@ namespace LevelGraph {
                 }
             }
             edges = newEdges;
+
+            EditorUtility.SetDirty(this);
+            AssetDatabase.SaveAssets();
         }
 
         public float GetAverageLength() {
@@ -61,8 +70,19 @@ namespace LevelGraph {
 
         void OnBeforeVertexDelete(Vertex vertexToDelete) {
             edges.RemoveAll((edge) => {
-                return edge.GetSource() == vertexToDelete || edge.GetTarget() == vertexToDelete;
+                if(edge.GetSource() == vertexToDelete) {
+                    edge.GetTarget().RemoveEdge(edge);
+                    return true;
+                }
+                if(edge.GetTarget() == vertexToDelete) {
+                    edge.GetSource().RemoveEdge(edge);
+                    return true;
+                }
+                return false;
             });
+
+            EditorUtility.SetDirty(this);
+            AssetDatabase.SaveAssets();
         }
 
         void OnDrawGizmos() {
